@@ -9,7 +9,7 @@ export class Footer extends React.Component {
 
   render() {
     return (
-      <footer className="mastfoot mt-auto">
+      <footer className="mastfoot mt-auto text-center">
         <div className="inner">
           <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://www.facebook.com/gusjib.j">Chaiwat Chaichan</a>.</p>
         </div>

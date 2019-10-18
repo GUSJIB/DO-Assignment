@@ -1,6 +1,6 @@
 let express = require('express');
-let http = require('http');
 const querystring = require('querystring');
+const request = require('request-promise');
 let router  = express.Router();
 
 class SCGRoutes {
@@ -11,7 +11,7 @@ class SCGRoutes {
   // }
 
   findXYZ() {
-    return (req, res) => {
+    return (req, res, next) => {
       let input = ['X', 5, 9, 15, 23, 'Y', 'Z']
       let result = {}
       input.map((item, index) => {
@@ -30,12 +30,12 @@ class SCGRoutes {
           input[index] = result[item];
         }
       });
-      res.json(result);
+      next(res.json(result));
     };
   }
 
   findBangSueRestaurants() {
-    return async (req, res) => {
+    return async (req, res, next) => {
       let params = {
         location: `13.8234866,100.5081204`,
         radius: 1000,
@@ -44,9 +44,8 @@ class SCGRoutes {
       };
       let query = querystring.stringify(params)
       let url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?${query}`;
-      let response = await http.get(url)
-      let restaurants = response.data
-      res.json(restaurants)
+      let response = await request(url);
+      next(res.send(response));
     };
   }
 }
