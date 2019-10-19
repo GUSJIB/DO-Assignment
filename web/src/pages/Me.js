@@ -25,7 +25,7 @@ export class Me extends React.Component {
             <h3 className="title text-primary">Chaiwat Chaichan</h3>
             <h5 className="text-secondary">Full Stack Developer</h5>
             <div className="row">
-              <p className="col-md-6 text-info"><MdMail /> gusjib.j@gmail.com</p>
+              <p className="col-md-6 text-info"><MdMail /> chachaic@scg.com</p>
               <p className="col-md-6 text-info"><MdPhonePortrait /> 087-5482377</p>
             </div>
           </div>
