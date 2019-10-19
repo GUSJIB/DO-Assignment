@@ -1,12 +1,12 @@
 # DO-Assignment
 
 ## For start API
-`~ cd api
- ~ npm start`
+`~ cd api`
+`~ npm start`
 
 ## For start web
-`~ cd web
- ~ npm start`
+`~ cd web`
+`~ npm start`
 
 ## Presentation
 
