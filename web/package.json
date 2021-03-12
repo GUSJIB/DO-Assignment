@@ -37,6 +37,6 @@
   },
   "devDependencies": {
     "babel-preset-react-app": "^9.0.0",
-    "react-dev-utils": "^9.1.0"
+    "react-dev-utils": "^11.0.4"
   }
 }
